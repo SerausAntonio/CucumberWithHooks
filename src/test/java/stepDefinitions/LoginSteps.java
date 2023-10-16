@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class LoginSteps extends BaseUtil {
-
+ //  WebDriver driver;
     @Given("I navigate to the login page")
     public void iNavigateToTheLoginPage() {
         driver.navigate().to("https://admin-demo.nopcommerce.com/login");

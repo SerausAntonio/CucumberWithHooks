@@ -8,17 +8,19 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
 import java.sql.Timestamp;
 
 public class Hooks extends BaseUtil {
-    private WebDriver driver;
+   // WebDriver driver;
 
     @Before
     public void setUp(Scenario scenario){
         System.out.println(scenario.getName());
-        driver = initializeBrowser();
+        initializeBrowser();
+
     }
     @AfterStep
     public void captureExceptionImage(Scenario scenario) throws IOException {
@@ -34,6 +36,5 @@ public class Hooks extends BaseUtil {
     @After
     public void tearDown(Scenario scenario){
         System.out.println(scenario.getStatus());
-        closeBrowser();
     }
 }
